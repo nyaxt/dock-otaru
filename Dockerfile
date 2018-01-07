@@ -7,5 +7,5 @@ RUN curl -o /tmp/otaru-bin.tar.gz https://storage.googleapis.com/otaru-release/o
     && mkdir -p /etc/otaru && mkdir -p /var/cache/otaru
 ENV OTARUDIR=/etc/otaru
 VOLUME ["/etc/otaru", "/var/cache/otaru"]
-EXPOSE 10246 8005
-ENTRYPOINT ["/opt/otaru/otaru-bin/otaru-proxy"]
+EXPOSE 10246 8443
+ENTRYPOINT ["/opt/otaru/otaru-bin/otaru-server"]
